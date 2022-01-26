@@ -1,0 +1,192 @@
+
+
+$bg-color : #FBFBFB;
+$secondary : #4372DF;
+$body-color : #EEEFF1; 
+$main : #fff;
+$body-background: #202124;
+$card : #3C4043;
+$create : #5cb85c;
+$font-text : 'Roboto', sans-serif;
+$font-title: 'Lora', serif;
+$skin-color: #99664D;
+$light-dark : #292b2c;
+
+
+body{
+    background-color: $body-background;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container{
+    
+    .team-header{
+        position: fixed;
+        inset: 20px 250px auto auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        z-index: 20;
+        // margin: 20px;
+        font-family: $font-text;
+        .add-member{
+            color: $main;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 20px;
+            background-color: $create;
+            ion-icon{
+                font-size: 18px;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .filter{
+            background-color: $body-background;
+            margin-left: 20px;
+            ion-icon{
+                color: $main;
+                font-size: 30px;
+            }
+            select{
+                padding: 13px;
+                border: none;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    // team body
+    .team-body{
+        margin: 110px 0 20px;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(25%, 50%));
+
+        .card{
+            background-color: $card;
+            border-radius: 4px;
+            font-family: $font-text;
+            text-align: center;
+            padding: 5px;
+            position: relative;
+            color: $main;
+            .menu{
+                position: absolute;
+                top: 5px;
+                font-size: 20px;
+                right: 10px;
+                padding: 5px;
+                background-color: $light-dark;
+                border-radius: 50%;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            hr{
+                z-index: 0;
+                margin-top: 40px;
+            }
+            &-body{
+                font-size: 14px;
+                img, ion-icon{
+                    position: absolute;
+                    top: 4px;
+                    left: 39%;
+                    z-index: 1;
+                    border-radius: 50px;
+                    height: 70px;
+                    width: 70px;
+                    border: 2px solid $skin-color;
+                }
+                .fullname{
+                    margin-top: 40px;
+                }
+                .mail{
+                    font-size: 13px;
+                    color: grey;
+                }
+                .job-title{
+                    span{
+
+                        border: 1px solid $create;
+                        padding: 10px;
+                        border-radius: 4px;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: $create;
+                        }
+                    }
+                }
+            }
+            &-footer{
+                background-color: $secondary;
+                border-radius: 4px;
+                border: none;
+                padding: 10px;
+                &:hover{
+                    background-color: inherit;
+                    border: 1px solid $secondary;
+                    cursor: pointer;
+                }
+                a{
+                    text-decoration: none;
+                    color: $main;
+                }
+            }
+        }
+    }
+
+    // modal
+    .modal{
+        position: relative;
+        margin-top: 100px;
+        width: 35%;
+        background-color: $body-background;
+        border-radius: 4px 0 4px 4px;
+        border: none;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        
+        .close{
+            position: absolute;
+            right: 0;
+            background-color: $main;
+            color: red;
+            font-size: 22px;
+            top: 0;
+            border-radius: 70px 0 70px 70px;
+            padding: 5px;
+            margin-bottom: 20px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &-header{
+            .search{
+                width: 70%;
+                margin: auto;
+                height: 35px;
+                border: none;
+                border-radius: 4px;
+                outline: none;
+
+            }
+        }
+
+        &-body{
+            margin-top: 20px;
+            border-top: 1px solid grey;
+            height: auto;
+        }
+    }
+}

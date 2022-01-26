@@ -1,0 +1,61 @@
+{% extends "boot/dashboard/base/base.html" %}
+
+{% load static %}
+
+{% block cssTags %}
+    <link rel="stylesheet" href="{% static 'boot/css/setting/setting.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Boot > Team
+{% endblock %}
+
+{% block dashboard %}
+
+    <div class="dashboard-app">
+
+        <div class="dashboard-app-header">
+
+            <img src="{% static 'boot/images/user.png' %}" alt="">
+
+            <div class="info">
+                <p>Dodi Kabeya</p>
+                <span>
+                    <a href="{% url 'profile' %}" style="text-decoration: none; color: white;">
+                        See profile
+                    </a>
+                </span>
+            </div>
+
+        </div>
+
+        <div class="dashboard-app-body">
+
+            <div class="card">
+                <p>
+                    <a href="">
+                        Account
+                    </a>
+                </p>
+            </div>
+            <div class="card">
+                <p>Languages</p>
+            </div>
+            <div class="card">
+                <p>Sharing</p>
+            </div>
+            <div class="card">
+                <p>Notifications</p>
+            </div>
+            <div class="card">
+                <p>About</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

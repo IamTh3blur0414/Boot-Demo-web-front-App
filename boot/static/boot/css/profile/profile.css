@@ -1,0 +1,73 @@
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .profile-header {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .profile-header img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.container .profile-header .number-pub {
+  text-align: center;
+  font-size: 18px;
+}
+
+.container .profile-description {
+  margin-left: 115px;
+  line-height: 30px;
+}
+
+.container .edit-profile {
+  margin: 20px 115px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+}
+
+.container .edit-profile:hover {
+  cursor: pointer;
+  color: #4372DF;
+}
+
+.container .edit-profile a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container .post {
+  margin: 30px 115px;
+}
+
+.container .post-header {
+  border-bottom: 1px solid grey;
+  font-size: 18px;
+  padding: 10px;
+}
+/*# sourceMappingURL=profile.css.map */

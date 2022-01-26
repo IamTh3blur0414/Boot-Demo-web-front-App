@@ -1,0 +1,96 @@
+{% extends "boot/dashboard/base/base.html" %}
+
+{% load static %}
+
+{% block cssTags %}
+    <link rel="stylesheet" href="{% static 'boot/css/edit/edit.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Boot > Edit-Profile
+{% endblock %}
+
+
+
+{% block dashboard %}
+
+    <div class="bio">
+
+        <div class="bio-header">
+            <img src="{% static 'boot/images/user.png' %}" alt="">
+            <input type="file" name="profile" id="" class="file" disabled>
+            <div class="edit-profile">Edit Profile Picture</div>
+        </div>
+
+        <div class="bio-body">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea name="bio" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="">
+                </div>
+                <div class="form-group">
+                    <label for="street-address">Street Address</label>
+                    <input type="text" name="name" id="">
+                </div>
+
+                <div class="grid-group">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" name="state" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Zip</label>
+                        <input type="text" name="zip" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" name="country" id="">
+                    </div>
+                </div>
+                <input type="submit" value="Edit Profile">
+            </form>
+        </div>
+
+
+
+    </div>
+
+    
+
+{% endblock %}
+
+<!-- jsTags -->
+{% block jsTags %}
+
+    <script>
+        const file = document.querySelector('.file');
+
+        const profile = document.querySelector('.edit-profile');
+
+        const filename = document.querySelector('.filename');
+
+        if(file.disabled){
+            file.style.display = 'none';
+        }
+
+        profile.addEventListener('click', ()=>{
+            file.disabled = false;
+            file.click()
+            if(! file.disabled){
+                file.style.display = 'block';
+            }
+        })
+    </script>
+
+
+{% endblock %}

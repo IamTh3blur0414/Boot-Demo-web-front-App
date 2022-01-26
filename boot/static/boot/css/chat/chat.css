@@ -1,0 +1,194 @@
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  overflow-y: hidden;
+}
+
+.container .dashboard-app {
+  margin: 5px 0;
+  height: 97vh;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.container .dashboard-app .all-chats {
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: #3C4043;
+  padding: 2px;
+}
+
+.container .dashboard-app-header, .container .dashboard-app-body {
+  margin: 10px 0;
+  background-color: #3C4043;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.container .dashboard-app-header .chat-header, .container .dashboard-app-body .chat-header {
+  text-align: right;
+  margin: 0 2px;
+}
+
+.container .dashboard-app-header .chat-body, .container .dashboard-app-body .chat-body {
+  margin: 5px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-top: 1px solid grey;
+  padding: 5px;
+}
+
+.container .dashboard-app-header .chat-body ion-icon, .container .dashboard-app-header .chat-body img, .container .dashboard-app-body .chat-body ion-icon, .container .dashboard-app-body .chat-body img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+}
+
+.container .dashboard-app-header .chat-body .group-name, .container .dashboard-app-body .chat-body .group-name {
+  line-height: 7px;
+  margin-left: 10px;
+}
+
+.container .dashboard-app-header .chat-body .group-name p, .container .dashboard-app-body .chat-body .group-name p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dashboard-app-header .chat-body .group-name p code, .container .dashboard-app-body .chat-body .group-name p code {
+  margin-left: 250px;
+}
+
+.container .dashboard-app-header .chat-body .group-name span, .container .dashboard-app-body .chat-body .group-name span {
+  font-size: 14px;
+  color: grey;
+}
+
+.container .dashboard-conversation {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  height: 97vh;
+  margin-top: 3vh;
+  background-color: #3C4043;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .dashboard-conversation .header {
+  position: fixed;
+  height: 7vh;
+  width: 453px;
+  padding: 10px;
+  top: 3vh;
+  background-color: #292b2c;
+  border-radius: 4px 4px 0 0;
+}
+
+.container .dashboard-conversation .header-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dashboard-conversation .header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.container .dashboard-conversation .body {
+  height: 83vh;
+  margin: 11vh 0;
+}
+
+.container .dashboard-conversation .body ul {
+  list-style-type: none;
+}
+
+.container .dashboard-conversation .body ul li {
+  padding: 10px;
+  background-color: #292b2c;
+  border-radius: 4px;
+  margin: 5px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container .dashboard-conversation .body ul .receiver {
+  margin-left: auto;
+}
+
+.container .dashboard-conversation .footer {
+  background-color: #292b2c;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  height: 7vh;
+  width: 453px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dashboard-conversation .footer .message {
+  color: #fff;
+  position: absolute;
+  background-color: #3C4043;
+  border: none;
+  bottom: 1px;
+  height: 90%;
+  -webkit-box-flex: 80%;
+      -ms-flex: 80%;
+          flex: 80%;
+  width: 70%;
+  border-radius: 4px;
+  outline: 1px solid #202124;
+}
+
+.container .dashboard-conversation .footer ion-icon {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+}
+/*# sourceMappingURL=chat.css.map */

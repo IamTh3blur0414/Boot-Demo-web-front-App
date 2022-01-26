@@ -1,0 +1,195 @@
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container .team-header {
+  position: fixed;
+  inset: 20px 250px auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  z-index: 20;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .team-header .add-member {
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: #5cb85c;
+}
+
+.container .team-header .add-member ion-icon {
+  font-size: 18px;
+}
+
+.container .team-header .add-member:hover {
+  cursor: pointer;
+}
+
+.container .team-header .filter {
+  background-color: #202124;
+  margin-left: 20px;
+}
+
+.container .team-header .filter ion-icon {
+  color: #fff;
+  font-size: 30px;
+}
+
+.container .team-header .filter select {
+  padding: 13px;
+  border: none;
+  border-radius: 4px;
+}
+
+.container .team-body {
+  margin: 110px 0 20px;
+  gap: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25%, 50%))[3];
+      grid-template-columns: repeat(3, minmax(25%, 50%));
+}
+
+.container .team-body .card {
+  background-color: #3C4043;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  color: #fff;
+}
+
+.container .team-body .card .menu {
+  position: absolute;
+  top: 5px;
+  font-size: 20px;
+  right: 10px;
+  padding: 5px;
+  background-color: #292b2c;
+  border-radius: 50%;
+}
+
+.container .team-body .card .menu:hover {
+  cursor: pointer;
+}
+
+.container .team-body .card hr {
+  z-index: 0;
+  margin-top: 40px;
+}
+
+.container .team-body .card-body {
+  font-size: 14px;
+}
+
+.container .team-body .card-body img, .container .team-body .card-body ion-icon {
+  position: absolute;
+  top: 4px;
+  left: 39%;
+  z-index: 1;
+  border-radius: 50px;
+  height: 70px;
+  width: 70px;
+  border: 2px solid #99664D;
+}
+
+.container .team-body .card-body .fullname {
+  margin-top: 40px;
+}
+
+.container .team-body .card-body .mail {
+  font-size: 13px;
+  color: grey;
+}
+
+.container .team-body .card-body .job-title span {
+  border: 1px solid #5cb85c;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.container .team-body .card-body .job-title span:hover {
+  cursor: pointer;
+  background-color: #5cb85c;
+}
+
+.container .team-body .card-footer {
+  background-color: #4372DF;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+}
+
+.container .team-body .card-footer:hover {
+  background-color: inherit;
+  border: 1px solid #4372DF;
+  cursor: pointer;
+}
+
+.container .team-body .card-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container .modal {
+  position: relative;
+  margin-top: 100px;
+  width: 35%;
+  background-color: #202124;
+  border-radius: 4px 0 4px 4px;
+  border: none;
+  -webkit-box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+          box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.container .modal .close {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  color: red;
+  font-size: 22px;
+  top: 0;
+  border-radius: 70px 0 70px 70px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.container .modal .close:hover {
+  cursor: pointer;
+}
+
+.container .modal-header .search {
+  width: 70%;
+  margin: auto;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.container .modal-body {
+  margin-top: 20px;
+  border-top: 1px solid grey;
+  height: auto;
+}
+/*# sourceMappingURL=team.css.map */

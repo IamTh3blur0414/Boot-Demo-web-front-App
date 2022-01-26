@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0.0">
+
+    <!-- font text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <!-- font title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> 
+
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="{% static 'boot/css/base/base.css' %}">
+    <link rel="shortcut icon" href="{% static 'boot/images/drboot.png' %}" type="image/x-icon">
+
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+    <!-- Css tags -->
+    {% block cssTags %}
+    
+    {% endblock %}
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+    <div class="left-navbar">
+
+        <nav class="nav">
+
+            <div class="navbar-item">
+                <a href="{% url 'home' %}" class="navbar-item-link">
+                    <ion-icon name="home"></ion-icon>
+                    <span>Overview</span>
+                </a>
+            </div>
+
+            <div class="navbar-item">
+                <a href="{% url 'team' %}" class="navbar-item-link">
+                    <ion-icon name="people"></ion-icon>
+                    <span>Team</span>
+                </a>
+            </div>
+
+            <div class="navbar-item">
+                <a href="{% url 'chat' %}" class="navbar-item-link">
+                    <ion-icon name="chatbubbles"></ion-icon>
+                    <span>Chat</span>
+                </a>
+            </div>
+
+            <div class="navbar-item">
+                <a href="{% url 'analyse' %}" class="navbar-item-link">
+                    <ion-icon name="analytics"></ion-icon>
+                    <span>Analyse</span>
+                </a>
+            </div>
+
+            <div class="navbar-item">
+                <a href="{% url 'settings' %}" class="navbar-item-link">
+                    <ion-icon name="cog"></ion-icon>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+            <div class="nav-calendar">
+                <div class="nav-calendar-group">
+                    <div class="nav-calendar-group-header">
+                        <span>Date</span>
+                    </div>
+                    <div class="nav-calendar-group-body">
+                        <ion-icon name="calendar-number"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-log">
+                <a href="" class="nav-log-out">
+                    <ion-icon name="log-out"></ion-icon>
+                    <span>Sign out</span>
+                </a>
+            </div>
+            
+        </nav>
+
+    </div>
+
+
+    <div class="dashboard">
+
+        <div class="container">
+
+            {% block dashboard %}
+            
+            {% endblock %}
+
+        </div>
+        
+    </div>
+
+    <!-- right dashboard -->
+    <div class="dashboard-right">
+
+        <div class="user">
+            <div class="notif">
+                <ion-icon name="notifications"></ion-icon>
+                <div class="notif-icon"></div>
+            </div>
+            <img src="{% static 'boot/images/user.png' %}" alt="">
+        </div>
+
+        <div class="user-body">
+            <div class="user-body-header">
+                <p>Premium</p>
+                <ion-icon name="finger-print"></ion-icon>
+            </div>
+
+            <div class="user-body-body">
+                <p class="activity">Activity</p>
+                <div class="user-card">
+                    <img src="{% static 'boot/images/user.png' %}" alt="">
+                    <div class="user-card-body">
+                        <span>Dodi Kabeya</span>
+                        <span>D.A / Fullstack</span>
+                    </div>  
+                </div>
+            </div>
+            <!-- <p class="signature">From Boot</p> -->
+        </div>
+
+    </div>
+
+    <!-- JsTags -->
+    {% block jsTags %}
+    
+    {% endblock %}
+
+
+    
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.2.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.2.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.2.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-2.4.2.min.js"
+            crossorigin="anonymous"></script>
+    {{ script|safe }}
+    {{ scripts|safe }}
+
+
+    <script>
+
+        const links = document.querySelectorAll('.navbar-item-link');
+
+        const length = links.length;
+
+        
+        for(let i = 0; i < length; i++){
+            
+            if(links[i].href === location.href){
+                
+
+                links[i].style.backgroundColor = '#292b2c';
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

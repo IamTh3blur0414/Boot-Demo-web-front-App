@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0.0">
+
+    <!-- font text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <!-- font title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="{% static 'boot/css/index/index.css' %}">
+    <link rel="shortcut icon" href="{% static 'boot/images/drboot.png' %}" type="image/x-icon">
+    <title>Boot</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="boot-card">
+            <div class="logo">
+                <img src="{% static 'boot/images/drboot.png' %}" alt="">
+
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="username@boot.com" id="" required>
+                <input type="password" name="password" placeholder="***********" minlength="6" maxlength="30" id="">
+
+                <a href="{% url 'forgot-password' %}" class="forgot">Forgot Password ?</a>
+
+                <input type="submit" value="LOG IN">
+
+                
+            </form>
+            <p>
+                Not have an account? 
+                <a href="{% url 'signup' %}" class="create"> Sign Up Here </a>
+            </p>
+
+        </div>
+
+        <div class="boot">
+            <div class="boot-header">
+                Boot
+            </div>
+            <div class="boot-body">
+                <p>
+                    Bring Data Together,
+                    Simplify your analysis
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+
+$bg-color : #FBFBFB;
+$secondary : #4372DF;
+$body-color : #EEEFF1; 
+$main : #fff;
+$body-background: #202124;
+$card : #3C4043;
+$create : #5cb85c;
+$font-text : 'Roboto', sans-serif;
+$font-title: 'Lora', serif;
+$skin-color: #99664D;
+$light-dark : #292b2c;
+
+
+body{
+    background-color: $body-background;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+    overflow-y: hidden;
+    .dashboard-app{
+        // background-color: $card;
+        margin: 5px 0;
+        height: 97vh;
+        flex: 50%;
+        font-family: $font-text;
+        color: $main;
+        .all-chats{
+            text-align: center;
+            font-size: 18px;
+            border-radius: 4px;
+            background-color: $card;
+            padding: 2px;
+        }
+
+        &-header, &-body{
+            margin: 10px 0;
+            background-color: $card;
+            padding: 10px;
+            border-radius: 4px;
+            .chat-header{
+                text-align: right;
+                margin: 0 2px;
+            }
+
+            .chat-body{
+                margin: 5px 2px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                border-top: 1px solid grey;
+                padding: 5px;
+                ion-icon, img{
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50px;
+                }
+                .group-name{
+                    line-height: 7px;
+                    margin-left: 10px;
+                    p{
+                        display: flex;
+                        justify-content: space-between;
+                        code{
+                            margin-left: 250px;
+                        }
+                    }
+                    span{
+                        font-size: 14px;
+                        color: grey;
+                    }
+                }
+
+            }
+        }
+    }
+    .dashboard-conversation{
+        flex: 50%;
+        height: 97vh;
+        margin-top: 3vh;
+        background-color: $card;
+        border-radius: 4px 4px 0 0;
+        color: $main;
+        font-family: $font-text;
+        .header{
+            position: fixed;
+            height: 7vh;
+            width: 453px;
+            padding: 10px;
+            top: 3vh;
+            background-color: $light-dark;
+            border-radius: 4px 4px 0 0;
+            &-app{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin: 0 10px;
+            }
+        }
+
+        // body
+        .body{
+            height: 83vh;
+            margin: 11vh 0;
+            ul{
+                list-style-type: none;
+                li{
+                    padding: 10px;
+                    background-color: $light-dark;
+                    border-radius: 4px;
+                    margin: 5px 0;
+                    width: fit-content;
+                }
+                .receiver{
+                    margin-left: auto;
+                }
+            }
+        }
+
+        // footer
+        .footer{
+            background-color: $light-dark;
+            padding: 10px;            
+            position: absolute;
+            bottom: 0;
+            height: 7vh;
+            width: 453px;
+            display: flex;
+            justify-content: space-between;
+            .message{
+                color: $main;
+                position: absolute;
+                background-color: $card;
+                border: none;
+                bottom: 1px;
+                height: 90%;
+                flex: 80%;
+                width: 70%;
+                border-radius: 4px;
+                outline: 1px solid $body-background;
+            }
+            ion-icon{
+                flex: 20%;
+            }
+
+        }
+    }
+}

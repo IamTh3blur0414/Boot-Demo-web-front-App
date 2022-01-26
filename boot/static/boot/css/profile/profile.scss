@@ -1,0 +1,77 @@
+$bg-color : #FBFBFB;
+$secondary : #4372DF;
+$body-color : #EEEFF1; 
+$main : #fff;
+$body-background: #202124;
+$card : #3C4043;
+$create : #5cb85c;
+$font-text : 'Roboto', sans-serif;
+$font-title: 'Lora', serif;
+$skin-color: #99664D;
+$light-dark : #292b2c;
+
+
+body{
+    background-color: $body-background;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container{
+    color: $main;
+    font-family: $font-text;
+
+    .profile-header{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        .number-pub{
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+    // description
+    .profile-description{
+        margin-left: 115px;
+        line-height: 30px;
+    }
+
+    // edit profile
+    .edit-profile{
+        margin: 20px 115px;
+        border: 1px solid $main;
+        border-radius: 4px;
+        text-align: center;
+        padding: 10px;
+        &:hover{
+            // background-color: $secondary;
+            cursor: pointer;
+            color: $secondary;
+        }
+        a{
+            text-decoration: none;
+            color: $main;
+        }
+    }
+    // publications
+    .post{
+        margin: 30px 115px;
+        &-header{
+            border-bottom: 1px solid grey;
+            font-size: 18px;
+            padding: 10px;
+        }
+    }
+}

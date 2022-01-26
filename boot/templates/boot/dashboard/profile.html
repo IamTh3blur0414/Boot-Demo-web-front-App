@@ -1,0 +1,60 @@
+{% extends "boot/dashboard/base/base.html" %}
+
+{% load static %}
+
+{% block cssTags %}
+    <link rel="stylesheet" href="{% static 'boot/css/profile/profile.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Boot > Profile
+{% endblock %}
+
+
+
+{% block dashboard %}
+
+
+    <div class="profile-header">
+
+        <img src="{% static 'boot/images/user.png' %}" alt="">
+
+        <div class="number-pub">
+            <p>Posts</p>
+            <span>0</span>
+        </div>
+        <div class="number-pub relations">
+            <p>Relations</p>
+            <span>0</span>
+        </div>
+
+
+    </div>
+
+    <div class="profile-description">
+        <p class="fullname">Dodi Kabeya</p>
+
+        <div class="description">
+            Fullstack Developer and Data Analyst
+            <br>
+          <span>&#128205;</span> Paris 
+          <br>
+          <span>&#127979;</span>  IA School ( Boulogne-Billancourt ) 
+
+        </div>
+
+    </div>
+
+    <p class="edit-profile">
+        <a href="{% url 'edit' %}">Edit Profile</a>
+    </p>
+
+    <!-- Publications -->
+    <div class="post">
+        <p class="post-header">
+            Post(s)
+        </p>
+    </div>
+
+{% endblock %}

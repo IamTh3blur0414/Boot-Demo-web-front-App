@@ -1,0 +1,139 @@
+{% extends "boot/dashboard/base/base.html" %}
+
+{% load static %}
+
+{% block cssTags %}
+    <link rel="stylesheet" href="{% static 'boot/css/team/team.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Boot > Team
+{% endblock %}
+
+{% block dashboard %}
+    
+    <div class="team-header">
+        <button class="add-member">
+            <ion-icon name="add-circle"></ion-icon>
+            <span>Add a member</span>
+        </button>
+
+        <div class="filter">
+            <ion-icon name="filter"></ion-icon>
+            <select name="filter" id="">
+                <option>Filter</option>
+                <option value="name">Name</option>
+                <option value="title">Title</option>
+                <option value="year">Year</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="team-body">
+
+        <div class="card">
+            <ion-icon name="ellipsis-horizontal" class="menu"></ion-icon>
+            <hr>
+            <div class="card-body">
+                <img src="{% static 'boot/images/bootlogo.png' %}" alt="">
+                <p class="fullname">IamTh3blur14</p>
+                <p class="company">Company Name</p>
+                <span class="mail">IamTh3blur14@boot.com</span>
+                <p class="job-title">
+                    <span>Data Analyst / Fullstack Dev</span>
+                </p>
+            </div>
+            <p class="card-footer">
+                <a href="">
+                    View Profile
+                </a>
+            </p>
+        </div>
+
+        <div class="card">
+            <ion-icon name="ellipsis-horizontal" class="menu"></ion-icon>
+            <hr>
+            <div class="card-body">
+                <img src="data:image/jpeg;base64,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" alt="">
+                <p class="fullname">Anonymous</p>
+                <p class="company">Hacker Tech</p>
+                <span class="mail">Anonymous@boot.com</span>
+                <p class="job-title">
+                    <span>
+                        Hacker
+                    </span>
+                </p>
+            </div>
+            <p class="card-footer">
+                <a href="">
+                    View Profile
+                </a>
+            </p>
+        </div>
+
+        <div class="card">
+            <ion-icon name="ellipsis-horizontal" class="menu"></ion-icon>
+            <hr>
+            <div class="card-body">
+                <img src="{% static 'boot/images/dodi.jpg' %}" alt="">
+                <p class="fullname">Dodi Kabeya</p>
+                <p class="company">Boot</p>
+                <span class="mail">Dodi.kabeya@boot.com</span>
+                <p class="job-title">
+                    <span>
+                        Data Analyst
+                    </span>
+                </p>
+            </div>
+            <p class="card-footer">
+                <a href="">
+                    View Profile
+                </a>
+            </p>
+        </div>
+        
+
+    </div>
+
+    <!-- modal -->
+    <dialog class="modal">
+        <ion-icon name="close" class="close"></ion-icon>
+        <div class="modal-header">
+            <input type="text" name="search" id="" class="search">
+        </div>
+
+        <div class="modal-body">
+
+        </div>
+
+    </dialog>
+
+{% endblock %}
+
+<!-- Js Tags -->
+{% block jsTags %}
+
+    <script>
+
+        const modal = document.querySelector('.add-member');
+
+        const dialog = document.querySelector('.modal');
+
+        const close = document.querySelector('.close');
+
+        modal.addEventListener('click', ()=>{
+            dialog.showModal();
+            document.body.style.opacity = .2;
+        })
+        
+        close.addEventListener('click', ()=>{
+            dialog.close();
+            document.body.style.opacity = 1;
+        })
+        
+
+
+    </script>
+
+{% endblock %}

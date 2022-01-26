@@ -1,0 +1,139 @@
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+}
+
+.container .boot-card {
+  -webkit-box-flex: 35%;
+      -ms-flex: 35%;
+          flex: 35%;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .boot-card .logo {
+  position: absolute;
+  left: 35%;
+  background-color: #202124;
+  top: -70px;
+  border-radius: 50%;
+  border: 5px solid #3C4043;
+  padding: 5px;
+}
+
+.container .boot-card .logo img {
+  height: 80px;
+  width: 80px;
+}
+
+.container .boot-card p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.container .boot-card p a {
+  color: #5cb85c;
+}
+
+.container .boot-card form {
+  border-radius: 10px;
+  background-color: #3C4043;
+  display: block;
+  padding: 20px;
+  margin: auto 20px;
+  text-align: center;
+}
+
+.container .boot-card form input:not([type='submit']) {
+  height: 35px;
+  border-radius: 4px;
+  color: #4372DF;
+  outline: 1px solid #202124;
+  width: 100%;
+  margin: 20px 0;
+  border: none;
+}
+
+.container .boot-card form input[type='submit'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  background-color: #4372DF;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  margin: 20px 0 0;
+}
+
+.container .boot-card form input[type='submit']:hover {
+  cursor: pointer;
+}
+
+.container .boot-card form a {
+  text-decoration: none;
+}
+
+.container .boot-card form a.forgot {
+  color: #fff;
+  font-size: 16px;
+}
+
+.container .boot {
+  -webkit-box-flex: 65%;
+      -ms-flex: 65%;
+          flex: 65%;
+  text-align: center;
+}
+
+.container .boot-header {
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 70px;
+  color: #3C4043;
+  text-transform: uppercase;
+}
+
+.container .boot-body {
+  font-size: 30px;
+  color: #FBFBFB;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: block;
+    width: 90%;
+  }
+  .container .boot-card {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

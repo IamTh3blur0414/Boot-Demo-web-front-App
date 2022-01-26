@@ -1,0 +1,129 @@
+
+
+$bg-color : #FBFBFB;
+$secondary : #4372DF;
+$body-color : #EEEFF1; 
+$main : #fff;
+$body-background: #202124;
+$card : #3C4043;
+$create : #5cb85c;
+$font-text : 'Roboto', sans-serif;
+$font-title: 'Lora', serif;
+
+body{
+    background-color: $body-background;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    // height: 100vh;
+    margin-top: 150px;
+
+    .boot-card{
+        flex: 35%;
+        position: relative;
+        font-family: $font-text;
+        .logo{
+            position: absolute;
+            left: 35%;
+            background-color: $body-background;
+            top: -70px;
+            border-radius: 50%;
+            border: 5px solid $card;
+            padding: 5px;
+
+            img{
+                height: 80px;
+                width: 80px;
+            }
+        }
+        p{
+            text-align: center;
+            font-family: $font-text;
+            color: $main;
+            a{
+                color: $create;
+            }
+        }
+        form{
+            border-radius: 10px;
+            background-color: $card;
+            display: block;
+            padding: 20px;
+            margin: auto 20px;
+            text-align: center;
+            input:not([type='submit']){
+                height: 35px;
+                border-radius: 4px;
+                color: $secondary;
+                outline: 1px solid $body-background;
+                width: 100%;
+                margin: 20px 0;
+                border: none;
+            }
+            input[type='submit']{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 100%;
+                background-color: $secondary;
+                padding: 10px;
+                color: $main;
+                border: none;
+                border-radius: 4px;
+                font-size: 20px;
+                margin: 20px 0 0;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            a{
+                text-decoration: none;
+                &.forgot{
+                    color: $main;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+    .boot{
+        flex: 65%;
+        text-align: center;
+
+        &-header{
+            font-family: $font-title;
+            font-weight: bold;
+            font-size: 70px;
+            color: $card;
+            text-transform: uppercase;
+        }
+        &-body{
+            font-size: 30px;
+            color: $bg-color;
+            font-family: $font-text;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        display: block;
+        width: 90%;
+        .boot-card{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15%;
+}
+
+.container-app .confirmation {
+  background-color: #3C4043;
+  border-radius: 4px;
+  padding: 10px;
+  -webkit-animation-name: card;
+          animation-name: card;
+  -webkit-animation-delay: 6300ms;
+          animation-delay: 6300ms;
+  -webkit-animation-duration: 99999999999999999999s;
+          animation-duration: 99999999999999999999s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  opacity: 0;
+  color: #fff;
+}
+
+.container-app .confirmation-header {
+  font-family: "Lora", serif;
+  border-bottom: 1px solid grey;
+}
+
+.container-app .confirmation-header h1, .container-app .confirmation-header p {
+  text-align: center;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.container-app .confirmation-header h1 ion-icon, .container-app .confirmation-header p ion-icon {
+  color: #99664D;
+  font-size: 40px;
+  -webkit-animation: wave;
+          animation: wave;
+  -webkit-animation-duration: 950ms;
+          animation-duration: 950ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+}
+
+.container-app .confirmation-header p {
+  font-size: 23px;
+}
+
+.container-app .confirmation-body {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.container-app .confirmation-body p span {
+  color: #4372DF;
+}
+
+.container-app .confirmation-body .redirect {
+  font-size: 16px;
+}
+
+.container-app .confirmation-body .redirect a {
+  color: #5cb85c;
+}
+
+@-webkit-keyframes card {
+  0% {
+    opacity: 1;
+  }
+}
+
+@keyframes card {
+  0% {
+    opacity: 1;
+  }
+}
+
+.container-app .loading {
+  position: absolute;
+  left: 47%;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 10px dotted #4372DF;
+  -webkit-animation-name: load;
+          animation-name: load;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  opacity: 0;
+}
+
+@-webkit-keyframes load {
+  0% {
+    border: 25px dotted #4372DF;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+  25% {
+    border: 5px dotted #5cb85c;
+    opacity: .7;
+  }
+  50% {
+    border: 25px dotted #fff;
+    opacity: 1;
+  }
+  100% {
+    border: 5px dotted #4372DF;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: .7;
+  }
+}
+
+@keyframes load {
+  0% {
+    border: 25px dotted #4372DF;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+  25% {
+    border: 5px dotted #5cb85c;
+    opacity: .7;
+  }
+  50% {
+    border: 25px dotted #fff;
+    opacity: 1;
+  }
+  100% {
+    border: 5px dotted #4372DF;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: .7;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container-app .confirmation {
+    margin-top: 25%;
+  }
+  .container-app .loading {
+    left: 40%;
+    top: 40%;
+  }
+}
+/*# sourceMappingURL=loading.css.map */

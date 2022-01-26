@@ -1,0 +1,161 @@
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container .dashboard-app {
+  width: 90%;
+  margin: 20px 0;
+}
+
+.container .dashboard-app-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33.3%)[3];
+      grid-template-columns: repeat(3, 33.3%);
+  gap: 20px;
+}
+
+.container .dashboard-app-header .card {
+  background-color: #3C4043;
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .dashboard-app-header .card-header {
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid grey;
+}
+
+.container .dashboard-app-header .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.container .dashboard-app-header .card-body .number {
+  text-align: center;
+  font-size: 23px;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.container .dashboard-app-header .card-body ion-icon {
+  background-color: #292b2c;
+  border-radius: 4px;
+  padding: 5px;
+  color: #5cb85c;
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.container .dashboard-app-header .card-body p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .dashboard-app-header .card-body p .premium {
+  font-size: 18px;
+  margin-bottom: 2px;
+  color: #fff;
+}
+
+.container .dashboard-app-header .card-body p span {
+  font-size: 14px;
+  color: #202124;
+  font-weight: bolder;
+}
+
+.container .dashboard-app-header .card-body p span code {
+  color: #5cb85c;
+  margin-left: 5px;
+}
+
+.container .dashboard-app-body {
+  margin: 20px 0;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #3C4043;
+}
+
+.container .dashboard-app-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
+  gap: 10px;
+}
+
+.container .dashboard-app-footer .card {
+  background-color: #3C4043;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.container .dashboard-app-footer .profile {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .dashboard-app-footer .profile-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .dashboard-app-footer .profile-header img {
+  width: 70px;
+  height: 70px;
+  padding: 2px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px dotted #4372DF;
+}
+
+.container .dashboard-app-footer .profile-header .fullname {
+  line-height: 5px;
+}
+
+.container .dashboard-app-footer .profile-header .fullname p {
+  font-size: 18px;
+}
+
+.container .dashboard-app-footer .profile-header .fullname span {
+  font-size: 13px;
+}
+
+.container .dashboard-app-footer .profile-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dashboard-app-footer .profile-body span {
+  color: #5cb85c;
+}
+/*# sourceMappingURL=home.css.map */

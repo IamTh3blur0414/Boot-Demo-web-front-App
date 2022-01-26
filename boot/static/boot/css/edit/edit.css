@@ -1,0 +1,113 @@
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container {
+  margin: 20px 115px auto 115px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .bio-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.container .bio-header ::-webkit-file-upload-button {
+  display: none;
+}
+
+.container .bio-header img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.container .bio-header .file::before {
+  content: 'FileName : ';
+  color: #fff;
+  height: 27px;
+}
+
+.container .bio-header .file {
+  margin-left: 200px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.container .bio-header .edit-profile {
+  color: #4372DF;
+}
+
+.container .bio-header .edit-profile:hover {
+  cursor: pointer;
+}
+
+.container .bio-body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container .bio-body .form-group {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.container .bio-body .form-group label {
+  color: #fff;
+}
+
+.container .bio-body .form-group input {
+  height: 35px;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.container .bio-body .form-group textarea {
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  height: 60px;
+}
+
+.container .bio-body .grid-group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (49%)[2];
+      grid-template-columns: repeat(2, 49%);
+  gap: 15px;
+}
+
+.container .bio-body input[type='submit'] {
+  background-color: #4372DF;
+  font-size: 17px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  color: #fff;
+  margin: 20px auto auto 10px;
+}
+/*# sourceMappingURL=edit.css.map */

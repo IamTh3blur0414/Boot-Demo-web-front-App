@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0.0">
+
+    <!-- font text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <!-- font title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="{% static 'boot/css/loading/loading.css' %}">
+    <link rel="shortcut icon" href="{% static 'boot/images/drboot.png' %}" type="image/x-icon">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Boot</title>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="container-app">
+
+
+            <div class="loading">
+            </div>
+    
+            <div class="confirmation">
+                <div class="confirmation-header">
+                    <h1>Welcome <ion-icon name="hand"></ion-icon> !</h1>
+                    {% if messages %}
+
+                        {% for msg in messages %}
+                            <p>{{ msg }}</p>
+                        {% endfor %}
+                    
+                    {% endif %}
+                </div>
+                <div class="confirmation-body">
+                    <p>
+                        We're excited to have you get started, 
+                        and count you as a member of <span>Boot</span>  family 
+                    </p>
+                    <p class="redirect">
+                        <a href="{% url 'index' %}"> Sign in</a>
+                    </p>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+
+
+</body>
+</html>

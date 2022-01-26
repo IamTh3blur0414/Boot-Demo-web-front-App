@@ -1,0 +1,142 @@
+
+
+$bg-color : #FBFBFB;
+$secondary : #4372DF;
+$body-color : #EEEFF1; 
+$main : #fff;
+$body-background: #202124;
+$card : #3C4043;
+$create : #5cb85c;
+$font-text : 'Roboto', sans-serif;
+$font-title: 'Lora', serif;
+$skin-color: #99664D;
+$light-dark : #292b2c;
+
+
+body{
+    background-color: $body-background;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container{
+    
+    .dashboard-app{
+        width: 90%;
+        margin: 20px 0;
+        // header
+        &-header{
+            display: grid;
+            grid-template-columns: repeat(3, 33.3%);
+            gap: 20px;
+    
+            .card{
+                background-color: $card;
+                border-radius: 4px;
+                color: $main;
+                font-family: $font-text;
+                &-header{
+                    text-align: center;
+                    font-size:18px;
+                    border-bottom: 1px solid grey;
+                }
+
+                &-body{
+                    display: flex;
+                    // justify-content: center;
+                    align-items: center;
+                    padding: 5px;
+                    .number{
+                        text-align: center;
+                        font-size: 23px;
+                        flex: 100%;
+                    }
+                    ion-icon{
+                        background-color: $light-dark;
+                        border-radius: 4px;
+                        padding: 5px;
+                        color: $create;
+                        font-size: 35px;
+                        margin-right: 5px;
+                    }
+                    p{
+                        display: flex;
+                        flex-direction: column;
+                        .premium{
+                            font-size: 18px;
+                            margin-bottom: 2px;
+                            color: $main;
+                        }
+                        span{
+                            font-size: 14px;
+                            color: $body-background;
+                            font-weight: bolder;
+                            code{
+                                color: $create;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // body
+        &-body{
+         margin: 20px 0;
+         padding: 5px;
+         border-radius: 4px;
+         background-color: $card;   
+        }
+        // footer
+        &-footer{
+            display: grid;
+            grid-template-columns: 45% 55%;
+            gap: 10px;
+
+            .card{
+                background-color: $card;
+                border-radius: 4px;
+                padding: 10px;
+            }
+            .profile{
+                color: $main;
+                font-family: $font-text;
+                &-header{
+                    display: flex;
+                    img{
+                        width: 70px;
+                        height: 70px;
+                        padding: 2px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        border: 5px dotted $secondary;
+                    }
+                    .fullname{
+                        line-height: 5px;
+                        p{
+                            font-size: 18px;
+                        }
+                        span{
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                &-body{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        color: $create;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+{% extends "boot/dashboard/base/base.html" %}
+
+{% load static %}
+
+{% block cssTags %}
+    <link rel="stylesheet" href="{% static 'boot/css/home/home.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Boot > Home
+{% endblock %}
+
+{% block dashboard %}
+
+    <div class="dashboard-app">
+        
+        <div class="dashboard-app-header">
+
+            <div class="card">
+                <p class="card-header">
+                    Number of Analyse
+                </p>
+
+                <div class="card-body">
+                    <p class="number">
+                        8
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <p class="card-header">
+                    Last Analyse
+                </p>
+                <div class="card-body">
+                    Summary
+                </div>
+            </div>
+
+            <div class="card">
+                <p class="card-header">
+                    Account details
+                </p>
+                <div class="card-body">
+                    <ion-icon name="finger-print"></ion-icon>
+                    <p>
+                        
+                        <span class="premium">Premium</span>
+                        <span>Offer. <code>Active(s)</code> </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- body -->
+        <div class="dashboard-app-body">
+            {{ div|safe }}
+        </div>
+
+        <!-- footer -->
+        <div class="dashboard-app-footer">
+
+            <div class="card gender">
+                {{ gender|safe }}
+            </div>
+
+            <div class="card profile">
+                <div class="profile-header">
+                    <img src="{% static 'boot/images/user.png' %}" alt="">
+
+                    <div class="fullname">
+                        <p>
+                            <a href="{% url 'profile' %}" style="text-decoration: none; color: white;">
+                                Dodi Kabeya
+                            </a>
+                        </p>
+                        <span>dodi.kabeya.30@boot.com</span>
+                    </div>
+
+                </div>
+
+                <div class="profile-body">
+                    <div class="profile-body-left">
+                        <p>
+                            Title : <span> CTO </span>
+                        </p>
+                        <p>
+                            Age : <span> 2 </span>
+                        </p>
+                    </div>
+
+                    <div class="profile-body-right">
+                        <p>
+                            Team : <span> Biso Dab </span>
+                        </p>
+                        <p>
+                            Website : <span> IamTheblur.com </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
